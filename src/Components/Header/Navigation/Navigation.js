@@ -31,49 +31,56 @@ const Navigation = () => {
               <li className="list-inline-item">
                 <Link to="/">
                   {" "}
-                  <CiHome /> &nbsp; Home
+                  <Button><CiHome /> &nbsp;Home</Button>
                 </Link>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
                   {" "}
-                  <CiShop /> &nbsp; Shop
+                  <Button> <CiShop /> &nbsp; Shop</Button>
+
                 </Link>
               </li>{" "}
               <li className="list-inline-item">
                 <Link to="/">
                   {" "}
-                  <DiAtom /> &nbsp; Bakery
+                  <Button> <DiAtom /> &nbsp; Bakery</Button>
+
                 </Link>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
                   {" "}
-                  <AiOutlineCoffee /> &nbsp; Coffee
+                  <Button>   <AiOutlineCoffee /> &nbsp; Coffee</Button>
+
                 </Link>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
                   {" "}
-                  <AiOutlineCoffee /> &nbsp;Fishion
+                  <Button>      <AiOutlineCoffee /> &nbsp;Fishion</Button>
+
                 </Link>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
                   {" "}
-                  <AiOutlineCoffee /> &nbsp; Elecrtonic
+                  <Button>  <AiOutlineCoffee /> &nbsp; Elecrtonic</Button>
+
                 </Link>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
                   {" "}
-                  <AiOutlineCoffee /> &nbsp; Blog
+                  <Button>   <AiOutlineCoffee /> &nbsp; Blog</Button>
+
                 </Link>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
                   {" "}
-                  <AiOutlineCoffee /> &nbsp;Contact Us
+                  <Button>   <AiOutlineCoffee /> &nbsp;Contact Us</Button>
+
                 </Link>
               </li>
             </ul>
