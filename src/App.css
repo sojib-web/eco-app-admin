@@ -155,10 +155,18 @@ header .part3 .circle svg {
   height: 25px;
   right: -6px;
 }
+nav .navpart1 {
+  max-width: 20% !important;
+  flex: 0 0 20% !important;
+}
 
+nav .navpart2 {
+  max-width: 80% !important;
+  flex: 0 0 80% !important;
+}
 nav .allatTab {
   background: #2bbef9;
-  padding: 8px 20px !important;
+  padding: 10px 15px !important;
   border-radius: 30px !important;
 }
 
@@ -170,6 +178,7 @@ nav .allatTab:hover {
 }
 nav .allatTab .text {
   font-weight: 600;
+  font-size: 13px;
 }
 
 nav .allatTab .icon1 svg {
@@ -178,4 +187,29 @@ nav .allatTab .icon1 svg {
 
 nav .allatTab .icon2 svg {
   font-size: 25px;
+}
+
+nav .navpart2 ul {
+  margin-bottom: 0px !important;
+}
+
+nav .navpart2 ul li a {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 8px 8px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 30px;
+}
+nav .navpart2 ul li a svg {
+  font-size: 15px;
+}
+
+nav .navpart2 ul li a:hover {
+  background: #f0faff;
+  color: #2bbef9;
 }
