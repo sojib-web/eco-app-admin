@@ -5,6 +5,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
 body {
   font-family: "Lato", sans-serif;
   font-size: 15px;
@@ -15,7 +17,6 @@ body {
 }
 
 @media (min-width: 1300px) {
-
   .container,
   .container-lg,
   .container-md,
@@ -38,6 +39,9 @@ body {
   background: transparent !important;
 }
 
+.headerWrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 .headerWrapper .bg-purple .p-text {
   margin-bottom: 0px;
   margin-top: 0px;
@@ -179,6 +183,45 @@ nav .navpart1 {
   flex: 0 0 20% !important;
 }
 
+nav .navpart1 .catWrapper {
+  position: relative;
+}
+
+nav .navpart1 .catWrapper .sidebarNav {
+  width: 280px;
+  height: 0px;
+  background: #fff;
+  position: absolute;
+  top: 160%;
+  left: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0px 15px;
+  opacity: 0;
+  transition: all 0.2s;
+  visibility: hidden;
+  z-index: 100;
+}
+
+nav .navpart1 .catWrapper .sidebarNav.open {
+  height: auto;
+  opacity: 1;
+  visibility: inherit;
+}
+nav .navpart1 .catWrapper .sidebarNav ul li {
+  width: 100%;
+  list-style: none;
+  /* padding: 0px 5px; */
+}
+nav .navpart1 .catWrapper .sidebarNav ul li button {
+  color: #000;
+  width: 100%;
+  justify-content: flex-start;
+  text-transform: capitalize;
+}
+nav .navpart1 .catWrapper .sidebarNav ul li button:hover {
+  background: transparent !important;
+}
+
 nav .navpart2 {
   max-width: 80% !important;
   flex: 0 0 80% !important;
@@ -186,7 +229,7 @@ nav .navpart2 {
 
 nav .allatTab {
   background: #2bbef9;
-  padding: 10px 15px !important;
+  padding: 10px 10px !important;
   border-radius: 30px !important;
 }
 
@@ -214,33 +257,113 @@ nav .allatTab .icon2 svg {
 nav .navpart2 ul {
   margin-bottom: 0px !important;
 }
+nav .navpart2 ul li {
+  padding-bottom: 20px;
+}
 
 nav .navpart2 ul li a {
   text-decoration: none;
 }
+nav .navpart2 ul li {
+  position: relative;
+}
+nav .navpart2 ul li .submenu {
+  position: absolute;
+  top: 120%;
+  left: 0px;
+  min-width: 200px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: 100;
+}
 
+nav .navpart2 ul li:hover .submenu {
+  opacity: 1;
+  visibility: inherit;
+  top: 100%;
+}
+
+nav .navpart2 ul li .submenu button:hover {
+  background: #f1f1f1 !important;
+}
+
+nav .navpart2 ul li .submenu a {
+  display: block;
+  width: 100%;
+}
+nav .navpart2 ul li .submenu button {
+  width: 100%;
+  justify-content: flex-start !important;
+  border-radius: 0px !important;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.homeBannerSection {
+  position: relative;
+  overflow: hidden;
+  top: 10px;
+}
+
+.homeBannerSection * {
+  outline: none !important;
+}
+
+/* .homeBannerSection .slick-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  background: #000;
+  border-radius: 100%;
+  font-family: FontAwesome !important;
+  font-weight: bold;
+}
+
+.homeBannerSection .slick-arrow.slick-next {
+  right: 25px !important;
+}
+.homeBannerSection .slick-arrow.slick-prev {
+  left: 25px !important;
+}
+
+.homeBannerSection .slick-arrow.slick-next::before {
+  font-family: FontAwesome !important;
+  color: #ccc;
+}
+
+.homeBannerSection .slick-arrow.slick-prev::before {
+  font-family: FontAwesome !important;
+  color: #ccc;
+} */
 nav .navpart2 ul li a button {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 8px 8px;
+  padding: 15px 15px;
   transition: all 0.2s ease-in-out;
   border-radius: 30px;
 }
 
 nav .navpart2 ul li a svg {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 nav .navpart2 ul li a:hover {
   background: #f0faff;
   color: #2bbef9;
 }
-
 
 .locationModal .MuiPaper-elevation {
   padding: 25px;
@@ -252,13 +375,11 @@ nav .navpart2 ul li a:hover {
   max-height: 400px;
   overflow-y: scroll;
   overflow-x: hidden;
-
 }
 
 .locationModal .countryList li {
   width: 100%;
   list-style: none;
-
 }
 
 .locationModal .countryList li button {
@@ -268,7 +389,13 @@ nav .navpart2 ul li a:hover {
   justify-content: flex-start !important;
   padding: 10px 20px;
 }
+.locationModal .countryList li button:hover {
+  background: #f1f1f1;
+}
 
+.locationModal .countryList li button.active {
+  background: #ccc;
+}
 .locationModal .close_ {
   position: absolute;
   top: 0px;

@@ -1,9 +1,19 @@
+import HomeBanner from "../../Components/HomeBanner/HomeBanner";
+
 const Home = () => {
-    return (
-        <>
-            <h1>Home</h1>
-        </>
-    );
-}
+  return (
+    <>
+      {/* <div className="homeBannerSection">
+        <div className="row">
+          <div className="col-md-3"></div>
+
+          <div className="col-md-7"></div>
+        </div>
+      </div> */}
+
+      <HomeBanner />
+    </>
+  );
+};
 
 export default Home;
