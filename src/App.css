@@ -7,6 +7,7 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 15px;
@@ -17,6 +18,7 @@ body {
 }
 
 @media (min-width: 1300px) {
+
   .container,
   .container-lg,
   .container-md,
@@ -24,6 +26,17 @@ body {
   .container-xl {
     max-width: 1200px !important;
   }
+}
+
+@media (min-width: 1300px) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -42,6 +55,7 @@ body {
 .headerWrapper {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .headerWrapper .bg-purple .p-text {
   margin-bottom: 0px;
   margin-top: 0px;
@@ -188,11 +202,11 @@ nav .navpart1 .catWrapper {
 }
 
 nav .navpart1 .catWrapper .sidebarNav {
-  width: 280px;
+  width: 250px;
   height: 0px;
   background: #fff;
   position: absolute;
-  top: 160%;
+  top: 165%;
   left: 0px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0px 15px;
@@ -203,23 +217,61 @@ nav .navpart1 .catWrapper .sidebarNav {
 }
 
 nav .navpart1 .catWrapper .sidebarNav.open {
-  height: auto;
+  height: 336px !important;
   opacity: 1;
   visibility: inherit;
 }
+
 nav .navpart1 .catWrapper .sidebarNav ul li {
   width: 100%;
   list-style: none;
   /* padding: 0px 5px; */
 }
+
 nav .navpart1 .catWrapper .sidebarNav ul li button {
   color: #000;
   width: 100%;
   justify-content: flex-start;
   text-transform: capitalize;
 }
+
 nav .navpart1 .catWrapper .sidebarNav ul li button:hover {
   background: transparent !important;
+}
+
+nav .navpart1 .catWrapper .sidebarNav ul li {
+  position: static;
+}
+
+nav .navpart1 .catWrapper .sidebarNav ul li .submenu {
+  position: absolute;
+  top: 0px;
+  left: 101%;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+nav .navpart1 .catWrapper .sidebarNav ul li:hover .submenu {
+  opacity: 1;
+  visibility: inherit;
+  left: 101%;
+}
+
+
+nav .navpart1 .catWrapper .sidebarNav ul li:hover .submenu {
+  border-radius: 0px !important;
+}
+
+nav .navpart1 .catWrapper .sidebarNav ul li button svg {
+  font-size: 15px;
+  opacity: 0.8;
 }
 
 nav .navpart2 {
@@ -257,6 +309,7 @@ nav .allatTab .icon2 svg {
 nav .navpart2 ul {
   margin-bottom: 0px !important;
 }
+
 nav .navpart2 ul li {
   padding-bottom: 20px;
 }
@@ -264,9 +317,11 @@ nav .navpart2 ul li {
 nav .navpart2 ul li a {
   text-decoration: none;
 }
+
 nav .navpart2 ul li {
   position: relative;
 }
+
 nav .navpart2 ul li .submenu {
   position: absolute;
   top: 120%;
@@ -293,6 +348,7 @@ nav .navpart2 ul li .submenu a {
   display: block;
   width: 100%;
 }
+
 nav .navpart2 ul li .submenu button {
   width: 100%;
   justify-content: flex-start !important;
@@ -344,7 +400,7 @@ nav .navpart2 ul li .submenu button {
   color: #ccc;
 } */
 nav .navpart2 ul li a button {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
@@ -357,7 +413,7 @@ nav .navpart2 ul li a button {
 }
 
 nav .navpart2 ul li a svg {
-  font-size: 10px;
+  font-size: 14px;
 }
 
 nav .navpart2 ul li a:hover {
@@ -389,6 +445,7 @@ nav .navpart2 ul li a:hover {
   justify-content: flex-start !important;
   padding: 10px 20px;
 }
+
 .locationModal .countryList li button:hover {
   background: #f1f1f1;
 }
@@ -396,6 +453,7 @@ nav .navpart2 ul li a:hover {
 .locationModal .countryList li button.active {
   background: #ccc;
 }
+
 .locationModal .close_ {
   position: absolute;
   top: 0px;
@@ -409,4 +467,45 @@ nav .navpart2 ul li a:hover {
 
 .locationModal .close_ svg {
   font-size: 22px;
+}
+
+.homeProducts {
+  padding: 25px 0px;
+  width: 100%;
+}
+
+.homeProducts .banner {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.homeProducts p {
+  color: #8b8b8b !important;
+}
+
+.productRow .hd {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.viewAllBtn {
+  padding: 5px 20px !important;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 30px !important;
+  color: #000 !important;
+  font-weight: bold;
+  text-transform: capitalize !important;
+}
+
+.viewAllBtn svg {
+  font-size: 15px;
+  right: 10px;
+}
+
+.productItem {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }

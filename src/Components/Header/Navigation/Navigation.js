@@ -7,7 +7,7 @@ import { CiHome } from "react-icons/ci";
 import { CiShop } from "react-icons/ci";
 import { DiAtom } from "react-icons/di";
 import { AiOutlineCoffee } from "react-icons/ai";
-
+import { FaAngleRight } from "react-icons/fa6";
 const Navigation = () => {
   const [isOpenSidebarVal, setIsOpenSidebarVal] = useState(true);
 
@@ -33,17 +33,26 @@ const Navigation = () => {
               </Button>
 
               <div
-                className={`sidebarNav ${
-                  isOpenSidebarVal === true ? "open" : ""
-                }`}
+                className={`sidebarNav ${isOpenSidebarVal === true ? "open" : ""
+                  }`}
               >
                 <ul>
+                  <li><Link to="/"> <Button><CiHome /> &nbsp;men <FaAngleRight className="ml-auto" /> </Button></Link>
+                    <div className="submenu">
+
+                      <Link to="/"> <Button>womexcfxn</Button></Link>
+                      <Link to="/"> <Button>womexn</Button></Link>
+                      <Link to="/"> <Button>womexcfxn</Button></Link>
+                      <Link to="/"> <Button>womexcxn df</Button></Link>
+
+                    </div>
+                  </li>
                   <li>
                     <Link to="/">
                       {" "}
                       <Button>
                         {" "}
-                        <CiHome /> &nbsp;men{" "}
+                        <CiHome /> &nbsp;women{" "}
                       </Button>{" "}
                     </Link>
                   </li>
@@ -61,9 +70,17 @@ const Navigation = () => {
                       {" "}
                       <Button>
                         {" "}
-                        <CiHome /> &nbsp;whatches{" "}
+                        <CiHome /> &nbsp;whatches <FaAngleRight className="ml-auto" />{" "}
                       </Button>{" "}
                     </Link>
+                    <div className="submenu">
+
+                      <Link to="/"> <Button>womexcfxn</Button></Link>
+                      <Link to="/"> <Button>womexn</Button></Link>
+                      <Link to="/"> <Button>womexcfxn</Button></Link>
+                      <Link to="/"> <Button>womexcxn df</Button></Link>
+
+                    </div>
                   </li>
                   <li>
                     <Link to="/">
