@@ -5,6 +5,7 @@ import Header from "./Components/Header/Header";
 import "./App.css"; // Importing CSS file at the beginning
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import Footer from "./Components/Footer/Footer";
 
 const MyContext = createContext();
 
@@ -39,6 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} /> {/* Removing exact prop */}
           </Routes>
+          <Footer />
         </MyContext.Provider>
       </BrowserRouter>
     </div>
