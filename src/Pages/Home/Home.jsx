@@ -24,14 +24,14 @@ const Home = () => {
       <section className="homeProducts">
         <div className="container">
           <div className="row">
-            <div className="col-md-3">
+            {/* <div className="col-md-3">
               <div className="sticky">
                 <div className="banner">
                   <img src={BannerImg} alt="" className="cursor w-100" />
                 </div>
               </div>
-            </div>
-            <div className="col-md-9 productRow">
+            </div> */}
+            <div className="col-md-12 productRow">
               <div className="d-flex align-items-center">
                 <div className="info ">
                   <h3 className="mb-0 hd">Best Sellers</h3>
@@ -47,11 +47,9 @@ const Home = () => {
 
               <div className="product_row w-100 mt-4">
                 <Swiper
-                  slidesPerView={4}
+                  slidesPerView={5}
                   spaceBetween={0}
-                  pagination={{
-                    clickable: true,
-                  }}
+                  navigation={true}
                   slidesPergroup={1}
                   modules={[Navigation]}
                   className="mySwiper"
@@ -76,6 +74,17 @@ const Home = () => {
                     <ProductsItem />
                   </SwiperSlide>
 
+                  <SwiperSlide>
+                    <ProductsItem />
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ProductsItem />
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ProductsItem />
+                  </SwiperSlide>
                   <SwiperSlide>
                     <ProductsItem />
                   </SwiperSlide>

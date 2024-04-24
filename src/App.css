@@ -637,32 +637,31 @@ nav .navpart2 ul li a:hover {
   padding-bottom: 20px;
 }
 
-.homeCat .swiper {
-  overflow: inherit !important;
-}
-.homeCat .swiper-button-prev,
-.homeCat .swiper-button-next {
-  top: -30px !important;
+.productRow .swiper-button-prev,
+.productRow .swiper-button-next {
+  top: 200px !important;
   width: 30px !important;
   height: 30px !important;
+  right: 3px;
 }
-.homeCat .swiper-button-prev {
-  right: 50px !important;
-  left: inherit !important;
+.productRow.swiper-button-prev {
+  right: 0px !important;
+  left: 0px !important;
 }
 
-.homeCat .swiper-button-prev::after,
-.homeCat .swiper-button-next::after {
-  font-size: 15px;
+.productRow .swiper-button-prev::after,
+.productRow .swiper-button-next::after {
+  font-size: 10px;
   font-weight: bold;
   color: #000000;
-  background: #1cb0ca;
+  background: #ffffff;
   width: 30px !important;
   height: 30px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.7);
 }
 
 .product_row2 {
