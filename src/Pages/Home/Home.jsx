@@ -34,7 +34,7 @@ const Home = () => {
             <div className="col-md-12 productRow">
               <div className="d-flex align-items-center">
                 <div className="info ">
-                  <h3 className="mb-0 hd">Best Sellers</h3>
+                  <h3 className="mb-0 hd">Bests Sellers</h3>
                   <p className="mb-0">
                     Do not miss the current offers until the end of March.
                   </p>
@@ -45,7 +45,7 @@ const Home = () => {
                 </Button>
               </div>
 
-              <div className="product_row w-100 mt-4">
+              <div className="product_row  w-100 mt-4">
                 <Swiper
                   slidesPerView={5}
                   spaceBetween={0}
@@ -88,13 +88,14 @@ const Home = () => {
                   <SwiperSlide>
                     <ProductsItem />
                   </SwiperSlide>
+
                 </Swiper>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="homeProducts">
+      <section className="homeProducts ">
         <div className="container">
           <div className="row">
             {/* <div className="col-md-3">
@@ -102,10 +103,10 @@ const Home = () => {
                 <img src={BannerImg} alt="" className="cursor" />
               </div>
             </div> */}
-            <div className="col-md-12 productRow">
+            <div className="col-md-12 productRow  ">
               <div className="d-flex align-items-center">
                 <div className="info ">
-                  <h3 className="mb-0 hd">Best Sellers</h3>
+                  <h3 className="mb-0 hd">New Products</h3>
                   <p className="mb-0">
                     Do not miss the current offers until the end of March.
                   </p>
@@ -126,8 +127,7 @@ const Home = () => {
 
                 <ProductsItem />
                 <ProductsItem />
-                <ProductsItem />
-                <ProductsItem />
+
               </div>
               <div className="info mt-3 mb-0 ">
                 <h3 className="mb-0 hd">Wekend discount 40%</h3>

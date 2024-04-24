@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
 import Dialog from "@mui/material/Dialog";
 import { Button } from "@mui/material";
 import { IoMdCloseCircle } from "react-icons/io";
 import Rating from "@mui/material/Rating";
+import imgUrl from "../../assets/image/product-image-59-600x540.jpg"
+import Slider from "react-slick";
+import InnerImageZoom from "react-inner-image-zoom";
+import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 const ProdutsModal = (props) => {
+
+
+  const ZoomSliderBig = useRef();
+  const ZoomSlider = useRef();
+
+  const settings2 = {
+    dots: false,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: false,
+    arrows: false,
+
+  };
   return (
     <>
       <Dialog
@@ -37,8 +56,25 @@ const ProdutsModal = (props) => {
 
         <hr></hr>
 
-        <div className="row mt-2">
-          <div className="col-6 col-md-5"></div>
+        <div className="row mt-2 productsDetailsModal">
+          <div className="col-md-5">
+
+            <div className="productZomm">
+              <Slider
+                {...settings2}
+                className="productZoomSlide"
+                ref={ZoomSliderBig}
+              >
+                <div className="productZoom">
+                  <InnerImageZoom
+                    zoomType="hover"
+                    zoomScale={1}
+                    src={imgUrl}
+                  />
+                </div>
+              </Slider>
+            </div>
+          </div>
 
           <div className="col-6 col-md-7"></div>
         </div>
