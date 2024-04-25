@@ -19,6 +19,7 @@ body {
 }
 
 @media (min-width: 1300px) {
+
   .container,
   .container-lg,
   .container-md,
@@ -543,12 +544,15 @@ nav .navpart2 ul li a:hover {
   color: rgba(0, 0, 0, 0.4);
   text-decoration: line-through;
 }
+
 .info .oldPrice.lg {
   font-size: 20px;
 }
+
 .info .newPrice.lg {
   font-size: 20px;
 }
+
 .info .newPrice {
   font-size: 16px;
   font-weight: bold;
@@ -918,6 +922,13 @@ footer .copyright ul li a:hover svg {
   border-radius: 15px;
 }
 
+.position-relative .badge {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  z-index: 100;
+}
+
 .productZoomSlide {
   padding-top: 10px;
 }
@@ -963,6 +974,7 @@ footer .copyright ul li a:hover svg {
   overflow: hidden;
   border-radius: 15px;
 }
+
 .zoomSlider .slick-slide .item {
   /* padding-right: 20px !important; */
 }
@@ -971,7 +983,74 @@ footer .copyright ul li a:hover svg {
   border: 1px solid #3bb77e !important;
 }
 
-.badge .bg-success {
+.badge {
+  display: inline-block;
+  padding: 10px 10px !important;
+  border-radius: 5px !important;
+}
+
+.textSize .badge {
+  font-size: 14px !important;
+}
+
+.badge.bg-success {
   background: #e5f8ed !important;
   color: #16b858 !important;
+}
+
+
+.btn-blue {
+  background: #233a95 !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+}
+
+.btn-big {
+  font-size: 15px !important;
+  padding: 7px 30px !important;
+}
+
+.btn-round {
+  border-radius: 30px !important;
+}
+
+.quintityDrop {
+  width: 150px;
+  gap: 10px;
+}
+
+.quintityDrop button {
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #edeef5 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #000;
+}
+
+.quintityDrop input {
+  width: 30px;
+  border: 0px;
+  background: transparent;
+  outline: none !important;
+  text-align: center;
+}
+
+.quintityDrop button svg {
+  color: #000 !important;
+}
+
+.capital button {
+  text-transform: capitalize !important;
+}
+
+.btn-modal {
+  font-size: 13px !important;
+  color: #000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-modal svg {
+  font-size: 15px;
 }

@@ -3,17 +3,19 @@ import Dialog from "@mui/material/Dialog";
 import { Button } from "@mui/material";
 import { IoMdCloseCircle } from "react-icons/io";
 import Rating from "@mui/material/Rating";
-import imgUrl from "../../assets/image/product-image-59-600x540.jpg";
+
 import imgUrl1 from "../../assets/image/product-image2-45-600x540.jpg";
 import imgUrl2 from "../../assets/image/product-image3-33-600x540.jpg";
+import imgUr23 from "../../assets/image/product-image23.jpg";
 import Slider from "react-slick";
 import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import QuantityBox from "../QuantityBox/QuantityBox";
+import { FaHeart } from "react-icons/fa";
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 
 const ProdutsModal = (props) => {
   const ZoomSliderBig = useRef();
@@ -39,7 +41,7 @@ const ProdutsModal = (props) => {
     arrows: true,
   };
 
-  const goto = (url, index) => {
+  const goto = (index) => {
     ZoomSlider.current.slickGoTo(index);
     ZoomSliderBig.current.slickGoTo(index);
   };
@@ -79,34 +81,37 @@ const ProdutsModal = (props) => {
 
         <div className="row mt-2 productsDetailsModal">
           <div className="col-md-5">
-            <div className="productZomm">
+            <div className="productZomm position-relative">
+              <div className="position-relative">
+                <span className="badge badge-primary">23%</span>
+              </div>
               <Slider
                 {...settings2}
                 className=" zoomSliderBig "
                 ref={ZoomSliderBig}
               >
                 <div className="item">
-                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl} />
+                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl1} />
                 </div>
 
                 <div className="productZoom">
-                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl} />
+                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl2} />
                 </div>
 
                 <div className="productZoom">
-                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl} />
+                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUr23} />
                 </div>
 
                 <div className="productZoom">
-                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl} />
+                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl1} />
                 </div>
 
                 <div className="productZoom">
-                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl} />
+                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl2} />
                 </div>
 
                 <div className="productZoom">
-                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUrl} />
+                  <InnerImageZoom zoomType="hover" zoomScale={1} src={imgUr23} />
                 </div>
               </Slider>
             </div>
@@ -130,7 +135,7 @@ const ProdutsModal = (props) => {
               </div>
               <div className="item">
                 <img
-                  src={imgUrl1}
+                  src={imgUr23}
                   alt=""
                   className="w-100"
                   onClick={() => goto(2)}
@@ -147,7 +152,7 @@ const ProdutsModal = (props) => {
 
               <div className="item">
                 <img
-                  src={imgUrl1}
+                  src={imgUrl2}
                   alt=""
                   className="w-100"
                   onClick={() => goto(4)}
@@ -155,7 +160,7 @@ const ProdutsModal = (props) => {
               </div>
               <div className="item">
                 <img
-                  src={imgUrl1}
+                  src={imgUr23}
                   alt=""
                   className="w-100"
                   onClick={() => goto(5)}
@@ -165,11 +170,26 @@ const ProdutsModal = (props) => {
           </div>
 
           <div className="col-6 col-md-7">
-            <div className="d-flex info aign-items-center">
+            <div className="d-flex info aign-items-center mb-3">
               <span className="oldPrice lg">$9.35</span>
               <span className="newPrice text-danger ml-2 lg">$7.35</span>
             </div>
-            <sapn className="badge bg-success">In Stock</sapn>
+            <div className="textSize">
+              <sapn className="badge bg-success">In Stock</sapn>
+              <p className="mt-3">Vivamus adipiscing nisl ut dolor dignissim semper <br /> Nulla luctus malesuada
+                tincidunt. Class aptent taciti  ,<br />sociosqu ad litora torquent</p>
+            </div>
+            <div className="d-flex align-items-center">
+              <QuantityBox />
+              <Button className=" btn-blue btn-lg btn-big btn-round ml-3">
+                add to cart
+              </Button>
+            </div>
+            <div className="d-flex align-items-center mt-5 capital">
+              <Button className="btn-round btn-modal" variant="outlined"><FaHeart />&nbsp; Add to Wishlist
+              </Button>
+              <Button className="btn-round btn-modal ml-3" variant="outlined"><CompareArrowsIcon />&nbsp; Add to Wishlist</Button>
+            </div>
           </div>
         </div>
       </Dialog>

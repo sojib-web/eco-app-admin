@@ -1,5 +1,5 @@
 import HomeBanner from "../../Components/HomeBanner/HomeBanner";
-import BannerImg from "../../assets/image/banner-box.jpg";
+
 import { Button } from "@mui/material";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import React from "react";
