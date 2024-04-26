@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import BannerImg from "../../assets/image/bg1.jpg";
+import ProImgBanner from '../../assets/image/bacola-banner-18.jpg'
 const HomeBanner = () => {
   var settings = {
     dots: true,
@@ -24,7 +25,7 @@ const HomeBanner = () => {
               <img src={BannerImg} alt="" className="w-100" />
             </div>
             <div className="item">
-              <img src={BannerImg} alt="" className="w-100" />
+              <img src={ProImgBanner} alt="" className="w-100" />
             </div>
           </Slider>
         </div>
