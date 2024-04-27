@@ -9,6 +9,7 @@ import { IoGitCompareSharp } from "react-icons/io5";
 import Tooltip from "@mui/material/Tooltip";
 import TabImg from "../../assets/image/author-4.png";
 import ProgressBar from "@ramonak/react-progress-bar";
+import RelatedProducts from "./RelatedProducts/RelatedProducts";
 const ProductsDetails = () => {
   const [activeSize, setActiveSize] = useState(null);
   const [activeTabs, setActivetabs] = useState(0);
@@ -238,12 +239,12 @@ const ProductsDetails = () => {
               )}
 
               {activeTabs === 2 && (
-                <div className="TabContenets">
-                  <div className="row">
+                <div className="TabContenets ">
+                  <div className="row ">
                     <div className="col-md-12">
-                      <h3>Customer questions & answers</h3>
+                      <h3 className="pb-5">Customer questions & answers</h3>
 
-                      <div className="card p-4 reviewsCard flex-row ">
+                      <div className="card p-4 BoxShadow reviewsCard flex-row ">
                         <div className="image">
                           <div className="rounded-circle">
                             <img src={TabImg} alt="" />
@@ -406,6 +407,10 @@ const ProductsDetails = () => {
               )}
             </div>
           </div>
+          <br />
+
+          <RelatedProducts title="Related Products" />
+          <RelatedProducts title="Recently Viewed Products" />
         </div>
       </section>
     </>

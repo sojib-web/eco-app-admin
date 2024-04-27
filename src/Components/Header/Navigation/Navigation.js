@@ -37,7 +37,7 @@ const Navigation = () => {
                   }`}
               >
                 <ul>
-                  <li><Link to="/"> <Button><CiHome /> &nbsp;men <FaAngleRight className="ml-auto" /> </Button></Link>
+                  <li><Link to="/ProductList"> <Button><CiHome /> &nbsp;men <FaAngleRight className="ml-auto" /> </Button></Link>
                     <div className="submenu">
 
                       <Link to="/"> <Button>womexcfxn</Button></Link>
@@ -48,7 +48,7 @@ const Navigation = () => {
                     </div>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/cat">
                       {" "}
                       <Button>
                         {" "}

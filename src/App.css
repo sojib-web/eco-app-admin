@@ -20,6 +20,7 @@ body {
 }
 
 @media (min-width: 1300px) {
+
   .container,
   .container-lg,
   .container-md,
@@ -1033,6 +1034,7 @@ footer .copyright ul li a:hover svg {
 .productsDetails .btn-circle {
   background: #edeef5 !important;
 }
+
 .quintityDrop {
   width: 150px;
   gap: 10px;
@@ -1086,6 +1088,7 @@ footer .copyright ul li a:hover svg {
   width: 20%;
   flex: 0 0 20%;
 }
+
 .product_Listing_page .productListing .sideBar .sticky {
   position: sticky;
   top: 50px;
@@ -1174,22 +1177,11 @@ label {
   border-radius: 8px;
 }
 
-.product_Listing_page
-  .productListing
-  .content-right
-  .ShowBy
-  .btnWrapper
-  button.act
-  svg {
+.product_Listing_page .productListing .content-right .ShowBy .btnWrapper button.act svg {
   opacity: 1 !important;
 }
 
-.product_Listing_page
-  .productListing
-  .content-right
-  .ShowBy
-  .btnWrapper
-  button {
+.product_Listing_page .productListing .content-right .ShowBy .btnWrapper button {
   min-width: 35px !important;
   height: 35px !important;
   width: 35px !important;
@@ -1197,26 +1189,14 @@ label {
   color: #000 !important;
 }
 
-.product_Listing_page
-  .productListing
-  .content-right
-  .ShowBy
-  .btnWrapper
-  button
-  svg {
+.product_Listing_page .productListing .content-right .ShowBy .btnWrapper button svg {
   color: #000;
 
   font-size: 25px !important;
   opacity: 0.5;
 }
 
-.product_Listing_page
-  .productListing
-  .content-right
-  .ShowBy
-  .btnWrapper
-  button:hover
-  svg {
+.product_Listing_page .productListing .content-right .ShowBy .btnWrapper button:hover svg {
   opacity: 1;
 }
 
@@ -1250,12 +1230,15 @@ label {
   display: flex;
   align-items: center;
 }
+
 .prouctListing .productItem.one .imgWrapper {
   width: 30%;
 }
+
 .prouctListing .productItem.two {
   width: 48%;
 }
+
 .prouctListing .productItem.three {
   width: 31.5%;
 }
@@ -1267,6 +1250,7 @@ label {
 .section {
   padding: 45px 0px;
 }
+
 .productsDetails .hd {
   font-size: 26px;
 }
@@ -1347,22 +1331,29 @@ label {
 .detailPagetabs .table th,
 .detailPagetabs .table td {
   vertical-align: middle;
-  font-size: 15px !important
-  ;
+  font-size: 15px !important;
 }
 
 .detailPagetabs .table td p {
   margin-bottom: 0px !important;
 }
+
 .table {
   margin-bottom: 0px !important;
 }
+
 .detailPagetabs {
   border: 1px solid#b7b8bb !important;
   margin-top: 50px;
   border-radius: 25px !important;
   background: #fafafa;
+
 }
+
+.BoxShadow {
+  box-shadow: 5px 5px 5px 5px #f1f2f2;
+}
+
 
 .customTabs ul li button.active {
   background: #233a95 !important;
@@ -1402,6 +1393,7 @@ label {
 
   color: #7e7e7e;
 }
+
 .ReceivesCard .info p {
   padding-left: 20px;
   padding-top: 8px;
@@ -1523,4 +1515,20 @@ hr {
 .progressBarSpan span {
   font-size: 15px;
   font-weight: bold;
+}
+
+.cartpage .table thead {
+  background: #f7f7f7 !important;
+  overflow: hidden !important;
+  border-radius: 20px;
+}
+
+.cartpage .table thead th {
+  border: 0px !important;
+}
+
+
+
+.borderRa {
+  border-radius: 1dvb !important;
 }
