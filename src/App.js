@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import Footer from "./Components/Footer/Footer";
 import ProductList from "./Pages/ProductList/ProductList";
+import ProductsDetails from "./Pages/ProductsDetails/ProductsDetails";
 
 const MyContext = createContext();
 
@@ -41,6 +42,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cat/:id" element={<ProductList />} />
+            <Route
+              exact={true}
+              path="/product/:id"
+              element={<ProductsDetails />}
+            />
           </Routes>
           <Footer />
         </MyContext.Provider>

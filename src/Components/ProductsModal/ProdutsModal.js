@@ -1,51 +1,18 @@
-import React, { useRef } from "react";
+import React from "react";
 import Dialog from "@mui/material/Dialog";
 import { Button } from "@mui/material";
 import { IoMdCloseCircle } from "react-icons/io";
 import Rating from "@mui/material/Rating";
-
-import imgUrl1 from "../../assets/image/product-image2-45-600x540.jpg";
-import imgUrl2 from "../../assets/image/product-image3-33-600x540.jpg";
-import imgUr23 from "../../assets/image/product-image23.jpg";
-import Slider from "react-slick";
-import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import QuantityBox from "../QuantityBox/QuantityBox";
 import { FaHeart } from "react-icons/fa";
-import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
+import ProductZoom from "../ProductZoom/ProductZoom";
 
 const ProdutsModal = (props) => {
-  const ZoomSliderBig = useRef();
-  const ZoomSlider = useRef();
-
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    fade: false,
-    arrows: true,
-  };
-
-  const settings2 = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: false,
-    arrows: true,
-  };
-
-  const goto = (index) => {
-    ZoomSlider.current.slickGoTo(index);
-    ZoomSliderBig.current.slickGoTo(index);
-  };
-
   return (
     <>
       <Dialog
@@ -81,7 +48,7 @@ const ProdutsModal = (props) => {
 
         <div className="row mt-2 productsDetailsModal">
           <div className="col-md-5">
-            <div className="productZomm position-relative">
+            {/* <div className="productZomm position-relative">
               <div className="position-relative">
                 <span className="badge badge-primary">23%</span>
               </div>
@@ -166,7 +133,9 @@ const ProdutsModal = (props) => {
                   onClick={() => goto(5)}
                 />
               </div>
-            </Slider>
+            </Slider> */}
+
+            <ProductZoom />
           </div>
 
           <div className="col-6 col-md-7">
@@ -176,8 +145,11 @@ const ProdutsModal = (props) => {
             </div>
             <div className="textSize">
               <sapn className="badge bg-success">In Stock</sapn>
-              <p className="mt-3">Vivamus adipiscing nisl ut dolor dignissim semper <br /> Nulla luctus malesuada
-                tincidunt. Class aptent taciti  ,<br />sociosqu ad litora torquent</p>
+              <p className="mt-3">
+                Vivamus adipiscing nisl ut dolor dignissim semper <br /> Nulla
+                luctus malesuada tincidunt. Class aptent taciti ,<br />
+                sociosqu ad litora torquent
+              </p>
             </div>
             <div className="d-flex align-items-center">
               <QuantityBox />
@@ -186,9 +158,14 @@ const ProdutsModal = (props) => {
               </Button>
             </div>
             <div className="d-flex align-items-center mt-5 capital">
-              <Button className="btn-round btn-modal" variant="outlined"><FaHeart />&nbsp; Add to Wishlist
+              <Button className="btn-round btn-modal" variant="outlined">
+                <FaHeart />
+                &nbsp; Add to Wishlist
               </Button>
-              <Button className="btn-round btn-modal ml-3" variant="outlined"><CompareArrowsIcon />&nbsp; Add to Wishlist</Button>
+              <Button className="btn-round btn-modal ml-3" variant="outlined">
+                <CompareArrowsIcon />
+                &nbsp; Add to Wishlist
+              </Button>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import Rating from "@mui/material/Rating";
 import { IoMdHeartEmpty } from "react-icons/io";
 import ProductsModal from "../../Components/ProductsModal/ProdutsModal";
 
-const ProductsItem = () => {
+const ProductsItem = (props) => {
   const [isOpenProductModal, setisOpenProductModal] = useState(false);
 
   const viewProductsDetails = () => {
@@ -20,7 +20,7 @@ const ProductsItem = () => {
 
   return (
     <>
-      <div className="item productItem">
+      <div className={`item productItem ${props.itemView}`}>
         <div className="imgWrapper">
           <img src={productImg} alt="" className="w-100" />
           <span className="badge badge-primary">28%</span>
