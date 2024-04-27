@@ -1532,3 +1532,28 @@ hr {
 .borderRa {
   border-radius: 1dvb !important;
 }
+
+.CartItemImgWrapper .ImgWrapper {
+  width: 100px;
+  overflow: hidden;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.CartItemImgWrapper .info a:hover {
+  text-decoration: none;
+}
+
+.CartItemImgWrapper .info h6 {
+  color: #000;
+}
+
+.CartItemImgWrapper .info h6:hover {
+  color: #16b858;
+}
+
+.CartItemImgWrapper {
+  width: 360px !important;
+}

@@ -1,5 +1,8 @@
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+
+import imgCart from "../../assets/image/1.jpg"
+import Rating from '@mui/material/Rating';
+import { Link } from "react-router-dom";
+import QuantityBox from "../../Components/QuantityBox/QuantityBox";
 const Cart = () => {
     return (
         <>
@@ -14,44 +17,24 @@ const Cart = () => {
                                 <table className="table">
                                     <thead>
                                         <tr>
-                                            <th>
-                                                <FormControlLabel
-                                                    className="w-100"
-                                                    control={<Checkbox />}
-                                                    label="Products"
-                                                />
+                                            <th width="50%">
+                                                Products
                                             </th>
                                             <th>
-                                                <FormControlLabel
-                                                    className="w-100"
-                                                    control={<Checkbox />}
-                                                    label="Unit Price"
-                                                />
+                                                Unit Price
 
                                             </th>
 
                                             <th>
-                                                <FormControlLabel
-                                                    className="w-100"
-                                                    control={<Checkbox />}
-                                                    label="Quantity"
-                                                />
+                                                Quantity
 
                                             </th>
                                             <th>
-                                                <FormControlLabel
-                                                    className="w-100"
-                                                    control={<Checkbox />}
-                                                    label=" Subtotal"
-                                                />
+                                                Subtotal
 
                                             </th>
                                             <th>
-                                                <FormControlLabel
-                                                    className="w-100"
-                                                    control={<Checkbox />}
-                                                    label="    Remove"
-                                                />
+                                                Remove
 
                                             </th>
 
@@ -61,9 +44,28 @@ const Cart = () => {
                                 </table>
                                 <tbody>
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td width="45%">
+                                            <Link to="/product/1">
+                                                <div className="d-flex align-items-center CartItemImgWrapper">
+                                                    <div className="ImgWrapper">
+                                                        <img className="w-100" src={imgCart} alt="" />
+                                                    </div>
+
+                                                    <div className="info px-3">
+                                                        <h6>
+
+                                                            Foster Farms Takeout Crispy Classic </h6>
+                                                        <Rating size="small" precision={0.5} name="read-only" value={3.7} readOnly />
+                                                    </div>
+                                                </div>
+                                            </Link>
+
+
+                                        </td>
+                                        <td>$7.7</td>
+                                        <td>
+                                            <QuantityBox />
+                                        </td>
                                         <td></td>
                                         <td></td>
                                     </tr>
