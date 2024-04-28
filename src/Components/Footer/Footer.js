@@ -200,7 +200,7 @@ const Footer = () => {
             Copyright 2024 © All rights reserved. Powered by{" "}
             <Link to="https://softexel.com/">Softexel</Link>
           </p>
-          <ul className="list list-inline ml-auto mb-0">
+          <ul className="list list-inline ml-auto mb-0 socials">
             <li className="list-inline-item">
               <Link to="">
                 {" "}

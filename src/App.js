@@ -9,12 +9,16 @@ import Footer from "./Components/Footer/Footer";
 import ProductList from "./Pages/ProductList/ProductList";
 import ProductsDetails from "./Pages/ProductsDetails/ProductsDetails";
 import Cart from "./Pages/Cart/Cart";
+import SignIn from "./Pages/SingIn/SingIn";
+import Signup from "./Pages/SingUp/SingUp";
 
 const MyContext = createContext();
 
 function App() {
   const [countryList, setCountryList] = useState([]);
   const [selectedCountry, setselectedCountry] = useState("");
+  const [isHeadeerFooterShow, SetisHeadeerFooterShow] = useState(true);
+  const [isLogin, setislogin] = useState(false);
 
   useEffect(() => {
     getCountry("https://countriesnow.space/api/v0.1/countries");
@@ -31,6 +35,10 @@ function App() {
     countryList,
     selectedCountry,
     setselectedCountry,
+    SetisHeadeerFooterShow,
+    isHeadeerFooterShow,
+    isLogin,
+    setislogin,
   };
 
   return (
@@ -39,14 +47,23 @@ function App() {
       {/* Adding a class name to the root element */}
       <BrowserRouter>
         <MyContext.Provider value={values}>
-          <Header />
+          {isHeadeerFooterShow === true && <Header />}
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cat/id" element={<ProductList />} />
-            <Route exact={true} path="/product/id" element={<ProductsDetails />} />
+            <Route
+              exact={true}
+              path="/product/id"
+              element={<ProductsDetails />}
+            />
             <Route exact={true} path="/cart" element={<Cart />} />
+
+            <Route exact={true} path="/signIn" element={<SignIn />} />
+            <Route exact={true} path="/signUp" element={<Signup />} />
           </Routes>
-          <Footer />
+
+          {isHeadeerFooterShow === true && <Footer />}
         </MyContext.Provider>
       </BrowserRouter>
     </div>
